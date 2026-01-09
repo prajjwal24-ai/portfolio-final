@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Prajjwal Katiyar - Aspiring Software Engineer" />
+  <title>Prajjwal Katiyar | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    // Prevent theme flash by setting theme before page renders
+    (function() {
+      const theme = localStorage.getItem('theme') || 
+                   (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">PK<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <div class="hero-content">
+        <p class="greeting">Hi, I'm</p>
+        <h1 class="name">Prajjwal Katiyar</h1>
+        <h2 class="role">Aspiring Software Engineer | CS Undergrad</h2>
+        <p class="bio">
+          Software Engineering Undergraduate with a strong foundation in Data Structures and Algorithms.
+          Passionate about building scalable systems and solving complex problems through clean, efficient code.
+          Proficient in Java, Python, and Full-Stack Development.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">See Projects</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="socials">
+          <a href="https://github.com/prajjwal24-ai" target="_blank" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg></a>
+          <a href="https://www.linkedin.com/in/prajjwal-katiyar-165545328/" target="_blank" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg></a>
+          <a href="mailto:prajjwalkatiyar24@gmail.com" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="skills container section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <div class="tags">
+            <span>Java</span><span>C++</span><span>Python</span><span>JavaScript</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Core Concepts</h3>
+          <div class="tags">
+            <span>DSA</span><span>OOPS</span><span>DBMS</span><span>OS</span><span>Computer Networks</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Web Dev</h3>
+          <div class="tags">
+            <span>HTML5</span><span>CSS3</span><span>React.js</span><span>Node.js</span><span>Express</span><span>REST
+              APIs</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools</h3>
+          <div class="tags">
+            <span>Git</span><span>GitHub</span><span>VS Code</span><span>Linux</span><span>Postman</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Algorithm Visualizer</h3>
+            <div class="project-links">
+              <a href="#" aria-label="View Code" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                  height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg></a>
+              <a href="#" aria-label="Live Demo" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                  height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg></a>
+            </div>
+          </div>
+          <p class="project-problem"><strong>Problem:</strong> Understanding complex graph algorithms like Dijkstra's
+            and BFS requires step-by-step visualization.</p>
+          <p class="project-desc">Built an interactive tool supporting 5+ algorithms with adjustable speed controls.
+            Improved peer understanding of graph traversals.</p>
+          <div class="project-tech">
+            <span>React.js</span><span>JavaScript</span><span>CSS Grid</span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Distributed Task Queue</h3>
+            <div class="project-links">
+              <a href="#" aria-label="View Code" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                  height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg></a>
+            </div>
+          </div>
+          <p class="project-problem"><strong>Problem:</strong> Needed a reliable way to process background jobs
+            asynchronously without blocking the server.</p>
+          <p class="project-desc">Implemented a producer/consumer model handling 1000+ requests/sec with retry logic.
+            Reduced API latency by 40%.</p>
+          <div class="project-tech">
+            <span>Node.js</span><span>Redis</span><span>Express</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-header">
+            <h3>E-Commerce API</h3>
+            <div class="project-links">
+              <a href="#" aria-label="View Code" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                  height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                  </path>
+                </svg></a>
+            </div>
+          </div>
+          <p class="project-problem"><strong>Problem:</strong> Building a functional backend for a shopping platform
+            with user management.</p>
+          <p class="project-desc">Developed RESTful APIs for product listing, cart, and users. Implemented CRUD
+            operations and data validation.</p>
+          <div class="project-tech">
+            <span>Java/Spring</span><span>PostgreSQL</span><span>Basic Auth</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="achievements" class="container section">
+      <h2 class="section-title">Achievements</h2>
+      <ul class="achievement-list">
+        <li><strong>LeetCode:</strong> Solved 500+ problems; Rated 1600+ (Contest Rating).</li>
+        <li><strong>Leadership:</strong> Technical Head Kinesis Technical Society; Organized 2 coding contests.</li>
+      </ul>
+    </section>
+
+    <section id="education" class="container section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-card">
+        <div class="edu-header">
+          <h3>B.Tech in Computer Science</h3>
+          <span class="edu-year">2024 - Present</span>
+        </div>
+        <p class="edu-inst">Krishna Institute of Technology</p>
+        <p class="edu-grade">CGPA: 8.13/10</p>
+        <p class="edu-coursework"><strong>Relevant Coursework:</strong> DSA, OS, DBMS, CN</p>
+        
+        <p class="edu-grade">Class X Percentage: 89.6%</p>
+        <p class="edu-grade">Class XII Percentage: 84.4%</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container section">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-msg">Open to SDE Intern opportunities. Let's build something great.</p>
+      <a href="mailto:prajjwalkatiyar24@gmail.com" class="btn btn-primary email-btn">prajjwalkatiyar24@gmail.com</a>
+
+      <footer class="footer">
+        <p>Built with love and code.</p>
+      </footer>
+    </section>
+
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
